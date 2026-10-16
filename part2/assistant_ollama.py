@@ -48,8 +48,8 @@ while True:
         extra_body = {"think": False},
     )
 
-    ai_replay = response.choices[0].message
-    content = ai_replay.content or getattr(ai_replay, "reasoning", "") or ""
+    ai_reply = response.choices[0].message
+    content = ai_reply.content or getattr(ai_reply, "reasoning", "") or ""
 
     if not content.strip():
         raise RuntimeError(
